@@ -1,0 +1,41 @@
+Code for creating the customised image file
+
+Install centos image via: docker pull centos
+
+
+1. Yum Configuration
+  cd /etc/yum.repos.d/
+  gedit docker.repo
+                [docker]
+                baseurl = https://download.docker.com/linux/centos/7/x86_64/stable/
+                gpgcheck=0
+  gedit anupreet.repo
+                [repo1]
+                baseurl = file:///run/media/root/RHEL-8-0-0-BaseOS-x86_64/AppStream
+                gpgcheck = 0
+
+                [repo2]
+                baseurl = file:///run/media/root/RHEL-8-0-0-BaseOS-x86_64/BaseOS
+                gpgcheck = 0
+
+2. Net-tools installation
+  yum install net-tools
+  
+3. firefox installation
+  yum install firefox
+  
+4. Httpd installation : to configure web server
+    yum install httpd
+    cd /var/www/html/
+    ls
+    cat > Index.html
+                    my home page
+    vi /root/.bashrc
+                    #add in last
+                    rm -f /var/run/httpd/httpd.pid
+                    /usr/sbin/httpd
+               
+ 5. Installation of open jdk software :
+    yum list | grep openjdk
+    yum install java-11-openjdk.x86_64  
+    
