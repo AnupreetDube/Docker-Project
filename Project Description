@@ -1,0 +1,24 @@
+I have created a customized OS image using a centos image as the base os
+This image can be installed in any OS using the docker containerization technique.
+Link for downloading my image: https://hub.docker.com/repository/docker/anupreetdube/mycentos
+
+This image is publicly available for download at hub.docker.com
+
+The Extra Features of this image are:
+1. preconfigured Yum
+2. net-tools software 
+3. httpd software
+4. firefox browser
+5. java script
+
+The above mentioned 4 features are not available in any raw centos image available on docker hub
+
+The benefits of the above installed softwares are:
+
+1. Yum helps to download the softwares
+In my image the yum is already configured to install any softwares related to docker or linux.
+2. Net-tools software helps find the IP address of our Container via the "ifconfig" command
+3. The httpd software helps to configure the Web Server
+4. Firefox browser helps browse the content on internet
+5. The openjdk software helps installation any working of any software that works on java script
+The best example is : Jenkins
